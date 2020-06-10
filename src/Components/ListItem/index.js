@@ -2,11 +2,11 @@ import React from "react";
 
 import "./styles.css";
 
-function ListItem() {
+function ListItem({ title, description }) {
   return (
     <div className="list-item">
-      <h2>Título</h2>
-      <p>Uma pequena demonstração do to-do list da Iteris</p>
+      <h2>{title}</h2>
+      <p>{description}</p>
     </div>
   );
 }
