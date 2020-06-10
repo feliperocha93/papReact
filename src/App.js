@@ -2,13 +2,13 @@ import React from "react";
 import "./App.css";
 
 import Header from "./Components/Header";
-import ListItem from "./Components/ListItem";
+import List from "./Components/List";
 
 function App() {
   return (
     <div className="App">
       <Header title="To-do Iteris"></Header>
-      <ListItem />
+      <List />
     </div>
   );
 }
