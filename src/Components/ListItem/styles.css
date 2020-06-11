@@ -19,3 +19,21 @@
   line-height: 1.5;
   margin: 10px 0;
 }
+
+.list-item button {
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 1.5px #f58220;
+  cursor: pointer;
+  left: 240px;
+  outline: none;
+  padding: 2px 0;
+  position: relative;
+  transition: all 0.5s ease;
+  width: 60px;
+}
+
+.list-item button:hover {
+  color: #f58220;
+  box-shadow: 0 0 2.5px #f58220;
+}

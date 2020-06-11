@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Header title="To-do Iteris"></Header>
       <Form tasks={tasks} setTasks={(task) => setTasks(task)} />
-      <List tasks={tasks} />
+      <List tasks={tasks} setTasks={(task) => setTasks(task)} />
     </div>
   );
 }

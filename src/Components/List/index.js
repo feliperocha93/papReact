@@ -3,7 +3,15 @@ import ListItem from "../ListItem";
 
 import "./styles.css";
 
-function List({ tasks }) {
+function List({ tasks, setTasks }) {
+  function deleteTask(title) {
+    const filteredTasks = tasks.filter((task) => {
+      return task.title !== title;
+    });
+
+    setTasks(filteredTasks);
+  }
+
   return (
     <>
       {tasks.length > 0 ? (
@@ -12,6 +20,7 @@ function List({ tasks }) {
             key={task.title}
             title={task.title}
             description={task.description}
+            deleteTask={(title) => deleteTask(title)}
           />
         ))
       ) : (
