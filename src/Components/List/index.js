@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import ListItem from "../ListItem";
 
 import "./styles.css";
 
-function List() {
-  const [tasks, setTasks] = useState([]);
-
+function List({ tasks }) {
   return (
     <>
       {tasks.length > 0 ? (

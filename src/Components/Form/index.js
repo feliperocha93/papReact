@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-function Form() {
+function Form({ tasks, setTasks }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    const task = { title, description };
+    setTasks([...tasks, task]);
+  }
+
   return (
-    <form className="list-form">
+    <form className="list-form" onSubmit={handleSubmit}>
       <input
         placeholder="Título"
         value={title}
