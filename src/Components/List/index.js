@@ -14,7 +14,11 @@ function List() {
   ]);
 
   return tasks.map((task) => (
-    <ListItem title={task.title} description={task.description} />
+    <ListItem
+      key={task.title}
+      title={task.title}
+      description={task.description}
+    />
   ));
 }
 
