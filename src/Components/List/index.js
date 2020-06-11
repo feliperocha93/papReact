@@ -4,18 +4,23 @@ import ListItem from "../ListItem";
 import "./styles.css";
 
 function List() {
-  const [tasks, setTasks] = useState([
-    { title: "papReact", description: "Terminar o módulo 3" },
-    {
-      title: "Janta",
-      description: "Colocar o frango na airfryer 15 minutos antes",
-    },
-    { title: "Clash Royale", description: "Subir 100 troféus antes de dormir" },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
-  return tasks.map((task) => (
-    <ListItem title={task.title} description={task.description} />
-  ));
+  return (
+    <>
+      {tasks.length > 0 ? (
+        tasks.map((task) => (
+          <ListItem
+            key={task.title}
+            title={task.title}
+            description={task.description}
+          />
+        ))
+      ) : (
+        <h2>Sem tarefas</h2>
+      )}
+    </>
+  );
 }
 
 export default List;

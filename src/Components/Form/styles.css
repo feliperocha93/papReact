@@ -1,0 +1,29 @@
+.list-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 330px;
+}
+
+.list-form input,
+.list-form textarea,
+.list-form button {
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 1.5px #f58220;
+  margin-bottom: 15px;
+  outline: none;
+  padding: 8px 4px;
+}
+
+.list-form button {
+  align-self: flex-end;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  width: 120px;
+}
+
+.list-form button:hover {
+  color: #f58220;
+  box-shadow: 0 0 2.5px #f58220;
+}
